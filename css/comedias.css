@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* header*/
+.navbar {
+  background: rgb(153, 126, 86);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+ padding: 40px;
+}
+
+.nav-logo {
+  
+  font-size: 60px;
+  margin: 15px;
+ 
+  color: black;
+font-family: initial;
+}
+
+.nav-items a {
+  margin: 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/*::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido
+estético a un elemento, usando la propiedad content . Este elemento se muestra en línea con el texto de forma predeterminada.*/
+
+.nav-items a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.5s;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Estilos para el botón del menú desplegable */
+.dropdown-btn {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  margin-right: 100px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Estilos para el contenido del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mostrar el contenido del menú desplegable cuando el botón se hace clic */
+.show {
+  display: block;
+}
+
+
+
+
+/*prueba*/
+.cont-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: white;
+
+}
+.img{
+  width:800px;
+ 
+  
+}
+
+.img img{
+  width: 100%;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.carta{
+  background-color: rgb(0,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px;
+  margin: 10px;
+  border: solid 10px;
+  color:rgb(173, 162, 155);
+ 
+
+}
+
+h1{
+  color:white ;
+  margin: 15px;
+  font-size: 40px;
+}
+
+h2{
+  color: rgb(153, 126, 86);
+  margin: 0px 10px;
+  font-size: 25px;
+  padding: 0px 10px;
+  
+}
+
+p{
+  color: rgb(153, 126, 86);
+  margin: 0px 10px;
+  font-size: 20px;
+  padding: 0px 10px;
+ 
+}
+span{
+  color:white ;
+}
+
+.carta:hover{
+  border-color:rgb(153, 126, 86) ;
+  cursor: grab;
+}
+
+a{
+  color: white;
+  margin: 0px 10px;
+  font-size: 20px;
+  padding: 0px 10px;
+  
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 126, 86);
+  margin: 10px;
+  padding: 20px;
+}
+
+.contacto {
+  display: flex;
+ justify-content: center;
+ 
+}
+
+.contacto a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: black;
+ margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+/*media queris*/
+
+@media (max-width: 768px) {
+  .nav-items {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      transform: translate(-100%);
+      transition: 0.3s ease all;
+      z-index: 1;
+  }
+
+  .nav-items a {
+      text-align: center;
+  }
+
+  .nav-toggle {
+
+      display: flex !important;
+      flex-direction: column;
+      margin: 15px;
+  }
+
+  .nav-toggle span {
+      width: 30px;
+      height: 4px;
+      background: white;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      transform-origin: 5px 0px;
+      /*La propiedad CSS transform-origin le permite modificar el origen de las transformaciones de un elemento. Por ejemplo, el transform-origin de la función rotate() es el centro de rotación. (Esta propiedad es aplicada a la primera translación del elemento por el valor negativo de la propiedad.*/
+      transition: all 0.2s linear;
+  }
+
+  .close span {
+      transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+      display: none;
+
+  }
+
+  .close span:nth-child(3) {
+      /*nth-child() es una pseudo-clase que selecciona a los elementos en un grupo de hermanos que coinciden con el patrón especificado. La forma en la que se construye dicho patrón es usando palabras clave, valores enteros, una fórmula e incluso selectores.*/
+      transform: rotate(-45deg) translate(-5px 1px);
+  }
+
+  .open {
+      transform: translatex(0) !important
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 15px;
+    color: white;
+  }
+}
