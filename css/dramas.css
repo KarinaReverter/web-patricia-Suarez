@@ -140,7 +140,7 @@ estético a un elemento, usando la propiedad content . Este elemento se muestra 
   
 
 h2{
-  color: rgb(153, 126, 86);
+  color: rgb(204, 173, 127);
   margin: 0px 10px;
   font-size: 25px;
   padding: 0px 10px;
@@ -148,7 +148,7 @@ h2{
 }
 
 p{
-  color: rgb(153, 126, 86);
+  color: rgb(204, 173, 127);
   margin: 0px 10px;
   font-size: 20px;
   padding: 0px 10px;
@@ -282,7 +282,7 @@ a{
     }
    
     p {
-      font-size: 12px;
+      font-size: 14px;
     }
 
    

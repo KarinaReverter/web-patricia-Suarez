@@ -269,4 +269,59 @@ main {
     margin: 15px;
     color: white;
   }
+
+  main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Contactame, .h1 {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .h1 h1 {
+    font-size: 50px; /* Adjust as needed */
+  }
+
+  .a {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .redes a {
+    margin: 5px; /* Reduce spacing */
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Style adjustments for medium screens */
+  main {
+    padding: 20px;
+  }
+
+  .Contactame, .h1 {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Style adjustments for large screens */
+  main {
+    padding: 30px;
+  }
+
+  .Contactame, .h1 {
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  .h1 h1 {
+    font-size: 70px; /* Adjust as needed */
+  }
 }
